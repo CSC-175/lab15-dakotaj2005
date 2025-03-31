@@ -7,26 +7,28 @@ double computeWays(int, int);
 double factorial(int);
 
 void getInfo(int &n, int &k) {
-while (n < 1 || n > 12) {
     cout << "How many balls (1-12) are in the pool to pick from? ";
     cin >> n;
 
-    if (n < 1 || n > 12) {
+    while (n < 1 || n > 12 || cin.fail()) {
+        cin.clear();
+        cin.ignore(100, '\n');
         cout << "Input Error! There must be between 1 and 12 balls.\n";
-        continue;
+        cout << "How many balls (1-12) are in the pool to pick from? ";
+        cin >> n;
     }
-while (k < 1 || k > 7) {
-    cout << "How many balls (1-7) will be drawn? ";
+
+    cout << "How many balls (1-" << n << ") will be drawn? ";
     cin >> k;
 
-    if (k < 1 || k > 7) {
+    while (k < 1 || k > n || cin.fail()) {
+        cin.clear();
+        cin.ignore(100, '\n');
         cout << "Input Error!\n";
+        cout << "How many balls (1-" << n << ") will be drawn? ";
+        cin >> k;
     }
-
 }
-}
-}
-
 
 /*******************************************************************
 * computeWays                                                      *
