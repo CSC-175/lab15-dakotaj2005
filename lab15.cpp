@@ -12,7 +12,7 @@ while (n < 1 || n > 12) {
     cin >> n;
 
     if (n < 1 || n > 12) {
-        cout << "Invalid input! Please enter a number between 1 and 12!\n";
+        cout << "Input Error! There must be between 1 and 12 balls.\n";
         continue;
     }
 while (k < 1 || k > 7) {
@@ -20,7 +20,7 @@ while (k < 1 || k > 7) {
     cin >> k;
 
     if (k < 1 || k > 7) {
-        cout << "Invalid input!\n";
+        cout << "Input Error!\n";
     }
 
 }
